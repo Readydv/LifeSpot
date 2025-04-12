@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>LifeSpot</title>
     <link href="../wwwroot/css/site.css" rel="stylesheet" type="text/css" />
+    <script src = "/wwwroot/js/site.js"></script>
+    <script>
+        //checkAge();
+        handleSession();
+        sessionLog();
+    </script>
 </head>
 <body>
     <header>
@@ -12,13 +18,13 @@
         <!--Параграф-->
         <p>Покажем, что происходит прямо сейчас</p>
 
-        <input type="text" class="seach-input" placeholder="Поиск видео.." />
-    </header>
+        <input type="text" oninput="filterContent(inputParseFunction)" size="50%">
 
     <aside id="sidebar">
         <div class="navbar">
         <a href="/"><p>Все трансляции</p></a>
-        <a href="/"><p>О проекте</p></a>
+        <a href="/about"><p>О проекте</p></a>
+        <a href="/testing"><p>Тестирование</p></a>
             </div>
     </aside>
 

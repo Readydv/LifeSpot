@@ -1,4 +1,18 @@
 /* Свойства стиля элемента. Подробнее о них - в модуле по CSS */
+.review-container, .review-button{
+    display: inline-block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.review-text{
+    display: block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-tol: 1%;
+}
+
 .bordered {
     border: 2px solid black;
     background-color: azure;
