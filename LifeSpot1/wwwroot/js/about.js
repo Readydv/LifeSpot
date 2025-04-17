@@ -17,6 +17,27 @@
     this.date = new Date().toLocaleString()
 }
 
+function addLike(id) {
+    // Найдём нужный элемент по id
+    let element = document.getElementById(id);
+
+    // Преобразуем текст элемента в массив, разбив его по пробелам (так как счётчик лайков у нас отделен от символа ❤️пробелом)
+    let array = element.innerText.split(' ')
+
+    // Вытащим искомое значение счётчика и сразу же преобразуем его в число, так как
+    // при сложении любого значения со строкой в JS будет строка, а нам этого не требуется
+    let resultNum = parseInt(array[array.length - 1], 10);
+
+    // Увеличим счётчик
+    resultNum += 1
+
+    // Сохраним измененное значение обратно в массив
+    array[array.length - 1] = `${resultNum}`
+
+    // Обновим текст элемента
+    element.innerText = array.join(' ')
+}
+
 function addComment() {
     let comment = new Comment()
 
